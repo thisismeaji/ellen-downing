@@ -11,7 +11,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 3rem;
+    gap: 5rem;
 }
 
 .canvasText{
@@ -52,7 +52,7 @@
     }
 
     .canvas{
-        flex-direction: column;
+        flex-direction: column-reverse;
         gap: 2rem;
     }
 
