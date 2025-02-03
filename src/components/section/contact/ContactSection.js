@@ -38,7 +38,7 @@ export default function ContactSection() {
   };
 
   return (
-    <section className={Styles.contactSection}>
+    <section className={Styles.contactSection} id="contact">
       <div>
         <h1>Contact Me</h1>
       </div>

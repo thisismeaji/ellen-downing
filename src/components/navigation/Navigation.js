@@ -18,9 +18,46 @@ export default function Navigation() {
         setIsNavActive(false);
     };
 
-    // Fungsi untuk close menu sebelum navigasi
-    const handleNavLinkClick = (href) => {
+    const smoothScroll = (targetPosition, duration) => {
+        const startPosition = window.pageYOffset;
+        const distance = targetPosition - startPosition;
+        let startTime = null;
+    
+        const animation = (currentTime) => {
+            if (startTime === null) startTime = currentTime;
+            const timeElapsed = currentTime - startTime;
+            const run = easeInOutQuad(timeElapsed, startPosition, distance, duration);
+    
+            window.scrollTo(0, run);
+    
+            if (timeElapsed < duration) {
+                requestAnimationFrame(animation);
+            }
+        };
+    
+        // Easing function untuk animasi halus
+        const easeInOutQuad = (t, b, c, d) => {
+            t /= d / 2;
+            if (t < 1) return (c / 2) * t * t + b;
+            t--;
+            return (-c / 2) * (t * (t - 2) - 1) + b;
+        };
+    
+        requestAnimationFrame(animation);
+    };
+    
+    // Fungsi handle klik navigasi
+    const handleNavLinkClick = (e, targetId) => {
+        e.preventDefault();
         setIsNavActive(false);
+    
+        const section = document.getElementById(targetId);
+        if (section) {
+            const targetPosition = section.offsetTop;
+            smoothScroll(targetPosition, 1000); // Scroll selama 2 detik (2000 ms)
+        } else if (targetId === 'home') {
+            smoothScroll(0, 1000); // Scroll ke atas untuk Home
+        }
     };
 
     return (
@@ -39,32 +76,32 @@ export default function Navigation() {
                 {/* Desktop Navigation */}
                 <ul className={Styles.navDekstop}>
                     <li>
-                        <Link href="/">Home</Link>
+                        <a href="/" onClick={(e) => handleNavLinkClick(e, 'home')}>Home</a>
                     </li>
                     <li>
-                        <Link href="/about">About</Link>
+                        <a href="#about" onClick={(e) => handleNavLinkClick(e, 'about')}>About</a>
                     </li>
                     <li>
-                        <Link href="/portfolio">Portfolio</Link>
+                        <a href="#portfolio" onClick={(e) => handleNavLinkClick(e, 'portfolio')}>Portfolio</a>
                     </li>
                     <li>
-                        <Link href="/contact">Contact</Link>
+                        <a href="#contact" onClick={(e) => handleNavLinkClick(e, 'contact')}>Contact</a>
                     </li>
                 </ul>
 
                 {/* Mobile Navigation */}
                 <ul className={`${Styles.navMobile} ${isNavActive ? Styles.navActive : ""}`}>
                     <li>
-                        <Link href="/" onClick={handleNavLinkClick}>Home</Link>
+                        <a href="/" onClick={(e) => handleNavLinkClick(e, 'home')}>Home</a>
                     </li>
                     <li>
-                        <Link href="/about" onClick={handleNavLinkClick}>About</Link>
+                        <a href="#about" onClick={(e) => handleNavLinkClick(e, 'about')}>About</a>
                     </li>
                     <li>
-                        <Link href="/portfolio" onClick={handleNavLinkClick}>Portfolio</Link>
+                        <a href="#portfolio" onClick={(e) => handleNavLinkClick(e, 'portfolio')}>Portfolio</a>
                     </li>
                     <li>
-                        <Link href="/contact" onClick={handleNavLinkClick}>Contact</Link>
+                        <a href="#contact" onClick={(e) => handleNavLinkClick(e, 'contact')}>Contact</a>
                     </li>
                     {/* Tombol Close */}
                     <li className={Styles.closeButton} onClick={handleClose}>×</li>

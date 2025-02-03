@@ -11,7 +11,7 @@ export default function page() {
   return (
     <>
       <HeroSection/>
-      <CanvasSection/>
+      <CanvasSection />
       <JourneySection/>
       <WorkSection/>
       <QuotesSection/>

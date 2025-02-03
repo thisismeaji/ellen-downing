@@ -5,7 +5,7 @@ import Button from '@/components/button/Button';
 
 export default function HeroSection() {
   return (
-    <section className={Styles.section}>
+    <section className={Styles.section} id="home">
         <div className={Styles.hero}>
             <div className={Styles.heroImage}>
                 <Image

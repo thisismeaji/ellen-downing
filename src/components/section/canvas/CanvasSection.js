@@ -4,7 +4,7 @@ import Image from 'next/image';
 
 export default function CanvasSection() {
   return (
-    <section className={Styles.section}>
+    <section className={Styles.section} id="about">
       <div className={Styles.canvas}>
             <div className={Styles.canvasText}>
                 <div>

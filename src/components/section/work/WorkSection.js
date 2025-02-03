@@ -5,7 +5,7 @@ import Work from '@/data/work/Work';
 
 export default function WorkSection() {
   return (
-    <section className={Styles.section}>
+    <section className={Styles.section} id="portfolio">
         <div className={Styles.work}>
             <div>
                 <h1>Sample Work</h1>
