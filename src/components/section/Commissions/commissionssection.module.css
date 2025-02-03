@@ -1,0 +1,53 @@
+.section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10rem 2rem 0 2rem;
+}
+
+.commissions{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 1200px;
+    gap: 5rem;
+}
+
+.commissionsImage img{
+    max-width: 30rem;
+    max-height: 40rem;
+
+}
+
+.commissionsText h2{
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+@media screen and (min-width:786px) and (max-width:1200px){
+
+    .section{
+        padding: 10rem 1.5rem 0 1.5rem;
+    }
+
+    .commissionsImage img{
+        max-width: 20rem;
+        max-height: 30rem;
+    }
+}
+
+@media screen and (max-width:786px){
+    .section{
+        padding: 5rem 1.5rem 0 1.5rem;
+    }
+    
+    .commissions{
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .commissionsImage img{
+        width: 100%;
+        height: 100%;
+    }
+}
