@@ -33,7 +33,7 @@ export default function Footer() {
                         />
                     </Link>
                 </li>
-                <li>
+                {/* <li>
                     <Link href="https://www.threads.net/@thisisme_aji">
                         <Image
                             src="/assets/icons/threads.png"
@@ -52,7 +52,7 @@ export default function Footer() {
                             height={1000}
                         />
                     </Link>
-                </li>
+                </li> */}
                 <li>
                     <Link href="/linkedin">
                         <Image

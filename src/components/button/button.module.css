@@ -1,0 +1,17 @@
+.button{
+    padding: 0.5rem 1.5rem;
+    font-size: 14px;
+    background-color: var(--secondary);
+    color: var(--white);
+    border: none;
+    font-family: 'Open Sans', sans-serif;
+    cursor: pointer;
+}
+
+@media screen and (max-width:786px){
+    
+    .button{
+        font-size: 12px;
+    }
+
+}
