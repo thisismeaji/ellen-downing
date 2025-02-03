@@ -8,7 +8,7 @@ export default function Footer() {
     <footer className={Styles.footer}>
       <div>
         <div>
-            <p>© 2025 Ajisaka Kamandanu. All Rights Reserved.</p>
+            <p>© 2025 Ellen Downing. All Rights Reserved.</p>
         </div>
         <div>
             <p>Connect with me</p>

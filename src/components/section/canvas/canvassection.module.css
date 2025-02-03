@@ -1,0 +1,68 @@
+.section{
+    padding: 10rem 2rem 0 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.canvas{
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+}
+
+.canvasText{
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    width: 100%;
+}
+
+.canvasText h2{
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+.canvasImage img{
+    max-width: 30rem;
+    max-height: 45rem;
+}
+
+@media screen and (min-width:786px) and (max-width:1200px){
+    .section{
+        padding: 10rem 1.5rem 0 1.5rem;
+    }
+
+    .canvasImage img{
+        max-width: 20rem;
+        max-height: 30rem;
+    }
+
+    .canvasText{
+        max-width: 30rem;
+    }
+}
+
+@media screen and (max-width:786px){
+    .section{
+        padding: 5rem 1.5rem 0 1.5rem;
+    }
+
+    .canvas{
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .canvasText{
+        max-width: 29rem;
+    }
+
+    .canvasImage img{
+        width: 100%;
+        max-width: 29rem;
+        height: 100%;
+    }
+}
