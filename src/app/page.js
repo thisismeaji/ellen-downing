@@ -1,5 +1,6 @@
 import CanvasSection from '@/components/section/canvas/CanvasSection';
 import CommissionsSection from '@/components/section/Commissions/CommissionsSection';
+import ContactSection from '@/components/section/contact/ContactSection';
 import HeroSection from '@/components/section/hero/HeroSection';
 import JourneySection from '@/components/section/journey/JourneySection';
 import QuotesSection from '@/components/section/quotes/QuotesSection';
@@ -15,6 +16,7 @@ export default function page() {
       <WorkSection/>
       <QuotesSection/>
       <CommissionsSection/>
+      <ContactSection/>
     </>
   )
 }
