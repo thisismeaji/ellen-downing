@@ -1,42 +1,68 @@
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+    --primary:#0E0A0A;
+    --secondary:#703F2A;
+    --accent:#ABA9A8;
+    --accentTwo: #EEEEE6;
+    --white: #FFFFFF;
+    --black: #000000;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
 }
 
-html,
-body {
-  max-width: 100vw;
-  overflow-x: hidden;
+body{
+    position: relative;
+    background-color: var(--primary);
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+
+header{
+    position: fixed;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    width: 100%;
 }
 
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
+h1{
+    font-size: 3em;
+    font-weight: 700;
+    font-family: 'Merienda', cursive;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+h2{
+    font-size: 1.5em;
+    font-weight: 600;
+    font-family: 'Open Sans', sans-serif;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
+h3{
+    font-size: 1.2em;
+    font-weight: 500;
+    font-family: 'Open Sans', sans-serif;
+}
+
+h4{
+    font-size: 1em;
+    font-weight: 500;
+    font-family: 'Open Sans', sans-serif;
+}
+
+p{
+    font-size: 1em;
+    font-weight: 400;
+    line-height: 2;
+    font-family: 'Open Sans', sans-serif;
+}
+
+a{
+    color: inherit;
+    text-decoration: none;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
 }
